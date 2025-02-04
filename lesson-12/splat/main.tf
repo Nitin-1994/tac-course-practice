@@ -13,6 +13,6 @@ provider "aws" {
 
 resource "aws_security_group" "multiple_groups" {
   for_each = var.multi_group_names
-  name     = each.value
+  name     = each.key
 
 }
